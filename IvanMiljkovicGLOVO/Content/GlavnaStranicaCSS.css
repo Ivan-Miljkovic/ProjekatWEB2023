@@ -1,0 +1,344 @@
+﻿#navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    background-color: #333;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    z-index: 1000;
+    width: 105%;
+    transition: 0.5s;
+    position: fixed;
+    top: 0;
+}
+
+    #navbar h5 {
+        text-align: center;
+        display: block;
+        color: orange;
+        margin: 14px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    #navbar a:hover {
+        background-color: #858481;
+        transition: 1s;
+    }
+
+    #navbar .fa {
+        display: none;
+    }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+@media screen and (max-width:767px) {
+    #navbar {
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+        #navbar a {
+            float: right;
+            display: block;
+            color: orange;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            column-span: all;
+            border: none;
+            font-size: 40px;
+            flex-grow: 2;
+        }
+
+        #navbar .linkovi {
+            position: fixed;
+            background-color: #333;
+            float: right;
+            height: 50vh;
+            width: 300px;
+            top: 0;
+            right: -20px;
+            text-align: left;
+            z-index: 2;
+            transition: 1s;
+            padding: 10px;
+            display: none;
+            border-style: solid;
+            border-color: #000000;
+            border-width: 0px 2px 2px 2px;
+        }
+
+    #otvoriMeni {
+        float: right;
+        text-align: right;
+    }
+
+    #navbar .fa {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    #zaglavlje {
+        display: flex;
+        flex-flow: column wrap;
+        background-color: #fcc603;
+        height: 1000px;
+        width: 1500px;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+        #zaglavlje #naslov {
+            padding-top: 50px;
+            display: flex;
+            height: 590px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #zaglavlje h1 {
+            margin: auto;
+            font-size: 35px;
+            text-align: center;
+        }
+
+    #slika img {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    #opis .row {
+        flex-direction: column;
+    }
+
+    #usluge .row {
+        flex-direction: column;
+    }
+
+    #usluge h1 {
+        margin: auto;
+        font-size: 10vw;
+        text-align: center;
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    #footer {
+        flex-direction: column;
+        height: 700px;
+    }
+
+        #footer .red {
+            margin-left: 10px;
+        }
+}
+
+@media(min-width: 768px) {
+    #zaglavlje {
+        background-color: #fcc603;
+        height: 1000px;
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        width: 100%;
+    }
+
+        #zaglavlje h1 {
+            font-size: 5vw;
+        }
+
+    #usluge h1 {
+        padding-top: 50px;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    #footer {
+        height: 500px;
+    }
+}
+
+#navbar a {
+    float: right;
+    display: block;
+    color: orange;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    column-span: all;
+    border-style: solid;
+    border-color: #f2f2f2;
+    border-width: 0px 1px 0px 1px;
+}
+
+#zaglavlje #naslov {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50vw;
+}
+
+#naslov h1 {
+    color: green;
+    text-align: center;
+    margin: auto;
+}
+
+#zaglavlje #slika {
+    width: 50vw;
+    display: flex;
+}
+
+#slika img {
+    margin: auto;
+}
+/* opis */
+#bojaOpisa {
+    background-color: #f5e7c1;
+}
+
+#opis {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+    #opis h1 {
+        font-size: 36px;
+        font-weight: 600;
+        padding-top: 50px;
+    }
+
+    #opis p {
+        color: #777;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 20px;
+        padding: 10px;
+    }
+
+    #opis .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #opis .col {
+        margin: 5px;
+        flex-basis: 31%;
+        background: #fff3f3;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        border: 1px hotpink solid;
+    }
+
+.col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+/* usluge */
+#usluge {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#bojaUsluge {
+    background-color: #7cd4fc;
+}
+
+#usluge .row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#usluge .radiSaNama {
+    background: #a2f78f;
+    margin: 5px;
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
+.radiSaNama:hover {
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.5);
+}
+
+#usluge h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+#usluge p {
+    color: #777;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+#usluge img {
+    margin: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 20.48vw;
+    height: 11.52vw;
+    min-width: 180px;
+    min-height: 90px;
+}
+
+#usluge .radiSaNamaSlike {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+/*FOOTER*/
+#footer {
+    background-color: #333;
+    padding-top: 50px;
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10px;
+}
+
+    #footer .red {
+        color: #ffffff;
+    }
+
+.red h5 {
+    font-weight: bolder;
+}
+
+.red .colona {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.red a {
+    color: #ffffff;
+}
+
+    .red a:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+body {
+    background-color: #fcc603;
+    padding:15px;
+}
