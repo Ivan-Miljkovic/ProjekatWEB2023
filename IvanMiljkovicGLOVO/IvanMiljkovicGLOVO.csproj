@@ -177,8 +177,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="FormaCSS.css" />
-    <Content Include="FormaJS.js" />
+    <Content Include="Account\FormaCSS.css" />
+    <Content Include="Account\FormaJS.js" />
     <Content Include="Content\GlavnaStranicaCSS.css" />
     <Content Include="GlavnaStranicaJS.js" />
     <Content Include="Global.asax" />
@@ -194,7 +194,7 @@
     <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Glovo.html" />
-    <Content Include="Poruci.aspx" />
+    <Content Include="Account\Poruci.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -378,11 +378,11 @@
     </Compile>
     <Compile Include="Logic\RoleActions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Poruci.aspx.cs">
+    <Compile Include="Account\Poruci.aspx.cs">
       <DependentUpon>Poruci.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Poruci.aspx.designer.cs">
+    <Compile Include="Account\Poruci.aspx.designer.cs">
       <DependentUpon>Poruci.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

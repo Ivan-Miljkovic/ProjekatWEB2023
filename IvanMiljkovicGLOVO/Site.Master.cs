@@ -79,6 +79,7 @@ namespace IvanMiljkovicGLOVO
                 loginLink.Visible = false;
                 korisnik.Visible = true;
                 logout.Visible = true;
+                porucistr.Visible = true;
                 
             }
         }

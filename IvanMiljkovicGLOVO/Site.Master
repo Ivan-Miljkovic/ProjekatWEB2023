@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Govlo</title>
-    <link rel="stylesheet" href="GlavnaStranicaCSS.css" />
+    <link rel="stylesheet" href="Content/GlavnaStranicaCSS.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
@@ -48,7 +48,7 @@
                 <i class="fa fa-times" id="zatvoriMeni"></i>
                 <a href="Default.aspx" class="col-md-3">Pocetna</a>
                 <a runat="server" class="col-md-3" id="adminLink" visible="false" href="Admin/UpravljajKorisnicima">Admin</a>
-                <a href="Poruci.aspx" class="col-md-3">Poruci</a>
+                <a href="Account/Poruci.aspx" class="col-md-3" id="porucistr" runat="server" visible="false">Poruci</a>
                 <a href="Account/Login.aspx" class="col-md-3" id="loginLink" runat="server" visible="true">Uloguj se</a>
                 <a class="col-md-3" id="korisnik" visible="false" runat="server"><%: Context.User.Identity.GetUserName() %></a>
                 <a class="col-md-3" visible="false" id="logout" runat="server"><asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" /></a>

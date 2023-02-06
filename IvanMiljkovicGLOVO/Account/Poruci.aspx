@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Govlo</title>
-    <link rel="stylesheet" href="Content/GlavnaStranicaCSS.css" />
+    <link rel="stylesheet" href="../Content/GlavnaStranicaCSS.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="FormaCSS.css" />
@@ -22,12 +22,10 @@
         </div>
        <div class="col linkovi" id="navLinkovi">
                 <i class="fa fa-times" id="zatvoriMeni"></i>
-                <a href="Default.aspx" class="col-md-3">Pocetna</a>
+                <a href="..\Default.aspx" class="col-md-3">Pocetna</a>
                 <a href="Poruci.aspx" class="col-md-3">Poruci</a>
-                <a href="contact" class="col-md-3">Kontakt</a>
-                <a href="Account/Login.aspx" class="col-md-3">Uloguj se</a>
-                 <a runat="server" id="adminLink" visible="false" href="Admin\UpravljajKorisnicima.aspx">Admin</a>
-                <a><h5><%: Context.User.Identity.GetUserName() %></h5></a>
+                 <a runat="server" id="adminLink" visible="false" href="..\Admin\UpravljajKorisnicima.aspx">Admin</a>
+                <a class="col-md-3" runat="server" id="korisnik" visible="false"><h5><%: Context.User.Identity.GetUserName() %></h5></a>
                
                  
             </div>

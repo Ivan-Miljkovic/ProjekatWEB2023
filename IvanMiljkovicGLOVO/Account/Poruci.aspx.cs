@@ -15,7 +15,16 @@ namespace IvanMiljkovicGLOVO
         SqlConnection con = new SqlConnection(cs);
         protected void Page_Load(object sender, EventArgs e)
         {
-                try
+            if (HttpContext.Current.User.IsInRole("canEdit"))
+            {
+                adminLink.Visible = true;
+
+            }
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                korisnik.Visible = true;
+            }
+            try
                 {
                 con.Open();
                 PopulateDropDown(con);
@@ -121,23 +130,27 @@ namespace IvanMiljkovicGLOVO
             SqlParameter KurirID = new SqlParameter();
             SqlParameter ObjekatID = new SqlParameter();
             SqlParameter PlacanjeUzivo = new SqlParameter();
+            SqlParameter proizvod = new SqlParameter();
 
             KorisnikID.Value = korisnikID;
             KurirID.Value = kurirID;
             ObjekatID.Value = objekatID;
             PlacanjeUzivo.Value = placanje;
+            proizvod.Value = Proizvod;
 
             KorisnikID.ParameterName = "@KorisnikID";
             KurirID.ParameterName = "@KurirID";
             ObjekatID.ParameterName = "@ObjekatID";
             PlacanjeUzivo.ParameterName = "@PlacanjeUzivo";
+            proizvod.ParameterName = "@Proizvod";
 
-            string upit = "INSERT INTO Porudzbina VALUES (@KorisnikID, @ObjekatID, @KurirID,  @PlacanjeUzivo)";
+            string upit = "INSERT INTO Porudzbina VALUES (@KorisnikID, @ObjekatID, @KurirID, @Proizvod,  @PlacanjeUzivo)";
             SqlCommand cmd = new SqlCommand(upit, con);
             cmd.Parameters.Add(KorisnikID);
             cmd.Parameters.Add(ObjekatID);
             cmd.Parameters.Add(KurirID);
             cmd.Parameters.Add(PlacanjeUzivo);
+            cmd.Parameters.Add(proizvod);
             cmd.ExecuteNonQuery();
 
             System.Diagnostics.Debug.WriteLine("Uspesno napravljena porudzbina!");
